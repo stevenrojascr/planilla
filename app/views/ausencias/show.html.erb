@@ -1,0 +1,43 @@
+<p>
+  <b>Empleado:</b>
+  <%=h @ausencia.empleado_id %>
+</p>
+
+<p>
+  <b>Fecha:</b>
+  <%=h @ausencia.fecha %>
+</p>
+
+<p>
+  <b>Evento:</b>
+  <%=h @ausencia.evento %>
+</p>
+
+<p>
+  <b>Días:</b>
+  <%=h @ausencia.dias %>
+</p>
+
+<p>
+  <b>Horas:</b>
+  <%=h @ausencia.horas %>
+</p>
+
+<p>
+  <b>Minutos:</b>
+  <%=h @ausencia.minutos %>
+</p>
+
+<p>
+  <b>Motivo:</b>
+  <%=h @ausencia.motivo %>
+</p>
+
+<p>
+  <b>Observaciones:</b>
+  <%=h @ausencia.observaciones %>
+</p>
+
+
+<%= link_to 'Editar', edit_ausencia_path(@ausencia) %> |
+<%= link_to 'Volver', ausencias_path %>

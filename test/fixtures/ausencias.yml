@@ -1,0 +1,35 @@
+# == Schema Information
+# Schema version: 20091229012843
+#
+# Table name: ausencias
+#
+#  id            :integer         not null, primary key
+#  empleado_id   :integer         not null
+#  fecha         :date            not null
+#  evento        :string(3)       default("AUS"), not null
+#  dias          :integer         default(0)
+#  horas         :integer         default(0)
+#  minutos       :integer         default(0)
+#  motivo        :string(3)       default("INJ"), not null
+#  observaciones :text
+#  created_at    :datetime
+#  updated_at    :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  empleado_id: 1
+  fecha: 2009-12-28
+  evento: MyString
+  duracion: 9.99
+  motivo: MyString
+  observaciones: MyText
+
+two:
+  empleado_id: 1
+  fecha: 2009-12-28
+  evento: MyString
+  duracion: 9.99
+  motivo: MyString
+  observaciones: MyText

@@ -1,0 +1,47 @@
+<p>
+  <b>Cédula:</b>
+  <%=h @empleado.cedula %>
+</p>
+
+<p>
+  <b>Nombre:</b>
+  <%=h @empleado.nombre %>
+</p>
+
+<p>
+  <b>Quincena:</b>
+  <%=h @empleado.quincena %>
+</p>
+
+<p>
+  <b>Factor hora por quincena:</b>
+  <%=h @empleado.factor_hora_por_quincena %>
+</p>
+
+<p>
+  <b>Fch ingreso:</b>
+  <%=h @empleado.fch_ingreso %>
+</p>
+
+<p>
+  <b>Activo:</b>
+  <%=h @empleado.activo %>
+</p>
+
+<p>
+  <b>Foto url:</b>
+  <%=h @empleado.foto_url %>
+</p>
+
+<p>
+  <b>Tel casa:</b>
+  <%=h @empleado.tel_casa %>
+</p>
+
+<p>
+  <b>Tel móvil:</b>
+  <%=h @empleado.tel_movil %>
+</p>
+
+<%= link_to 'Editar', edit_empleado_path(@empleado) %> |
+<%= link_to 'Volver', empleados_path %>

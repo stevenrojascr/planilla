@@ -1,0 +1,46 @@
+# == Schema Information
+# Schema version: 20091229012843
+#
+# Table name: empleados
+#
+#  id                       :integer         not null, primary key
+#  cedula                   :string(255)
+#  nombre                   :string(255)
+#  quincena                 :decimal(, )
+#  factor_hora_por_quincena :decimal(, )
+#  fch_ingreso              :date
+#  activo                   :boolean         default(TRUE)
+#  created_at               :datetime
+#  updated_at               :datetime
+#  foto_url                 :string(255)     default("/images/silueta.png")
+#  tel_casa                 :string(255)
+#  tel_movil                :string(255)
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+manuel:
+  cedula:       102220333
+  nombre:       MANUEL ZAMORA RODRIGUEZ
+  quincena:     120000
+  factor_hora_por_quincena: 100
+  fch_ingreso:  2008-01-15
+  activo:       true
+  foto_url:     foto.jpg
+
+      
+one:
+  cedula: MyString
+  nombre: MyString
+  quincena: 9.99
+  factor_hora_por_quincena: 9.99
+  fch_ingreso: 2009-05-17
+  activo: false
+
+two:
+  cedula: MyString
+  nombre: MyString
+  quincena: 9.99
+  factor_hora_por_quincena: 9.99
+  fch_ingreso: 2009-05-17
+  activo: false

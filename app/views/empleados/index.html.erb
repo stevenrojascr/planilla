@@ -1,0 +1,33 @@
+<div id="empleado-list">
+<h1>Lista de empleados</h1>
+
+<table>
+<% for empleado in @empleados %>
+	<tr class="<%=cycle('list-line-odd', 'list-line-even') %>">
+		<td>
+	       <%= image_tag empleado.foto_url, :class => 'list-image' %>
+	     </td>
+
+	     <td class="list-description">
+	        <dl>
+	          <dt><%=h empleado.nombre %></dt>
+	          <dd><%=h empleado.cedula %></dd>
+	          <dd><%="T: ".concat h empleado.tel_movil %></dd>
+	        </dl>
+	     </td>
+
+	     <td class="list-actions">
+	        <%= link_to 'Ver', empleado %><br/>
+	        <%= link_to 'Editar', edit_empleado_path(empleado) %><br/>
+	        <%= link_to 'Borrar', empleado, 
+	                    :confirm => 'Está seguro?',
+	                    :method => :delete %>
+	     </td>
+	   </tr>
+	 <% end %>
+	 </table>
+</div>
+
+<br />
+
+<%= link_to 'Nuevo empleado', new_empleado_path %>

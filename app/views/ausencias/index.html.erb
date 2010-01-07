@@ -1,0 +1,34 @@
+<h1>Lista de ausencias</h1>
+
+<table>
+  <tr>
+    <th>Empleado</th>
+    <th>Fecha</th>
+    <th>Evento</th>
+    <th>Días</th>
+    <th>Horas</th>
+    <th>Minutos</th>
+    <th>Motivo</th>
+    <th>Observaciones</th>
+  </tr>
+
+<% for ausencia in @ausencias %>
+  <tr>
+    <td><%=h ausencia.empleado_id %></td>
+    <td><%=h ausencia.fecha %></td>
+    <td><%=h ausencia.evento %></td>
+    <td><%=h ausencia.dias %></td>
+    <td><%=h ausencia.horas %></td>
+    <td><%=h ausencia.minutos %></td>
+    <td><%=h ausencia.motivo %></td>
+    <td><%=h ausencia.observaciones %></td>
+    <td><%= link_to 'Ver', ausencia %></td>
+    <td><%= link_to 'Editar', edit_ausencia_path(ausencia) %></td>
+    <td><%= link_to 'Borrar', ausencia, :confirm => 'Está seguro?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nueva ausencia', new_ausencia_path %>

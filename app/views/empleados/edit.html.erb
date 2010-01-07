@@ -1,0 +1,49 @@
+<h1>Editar empleado</h1>
+
+<% form_for(@empleado) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :cédula %><br />
+    <%= f.text_field :cedula %>
+  </p>
+  <p>
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </p>
+  <p>
+    <%= f.label :quincena %><br />
+    <%= f.text_field :quincena %>
+  </p>
+  <p>
+    <%= f.label :factor_hora_por_quincena %><br />
+    <%= f.text_field :factor_hora_por_quincena %>
+  </p>
+  <p>
+    <%= f.label :fch_ingreso %><br />
+    <%= f.date_select :fch_ingreso %>
+  </p>
+  <p>
+    <%= f.label :activo %><br />
+    <%= f.check_box :activo %>
+  </p>
+  <p>
+    <%= f.label :foto_url %><br />
+    <%= f.text_field :foto_url %>
+  </p>
+  <p>
+    <%= f.label :tel_casa %><br />
+    <%= f.text_field :tel_casa %>
+  </p>
+  <p>
+    <%= f.label :tel_móvil %><br />
+    <%= f.text_field :tel_movil %>
+  </p>
+
+  <p>
+    <%= f.submit "Actualizar" %>
+  </p>
+<% end %>
+
+<%= link_to 'Ver', @empleado %> |
+<%= link_to 'Volver', empleados_path %>

@@ -1,0 +1,43 @@
+<h1>Nueva ausencia</h1>
+
+<% form_for(@ausencia) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :empleado_id %><br />
+    <%= f.text_field :empleado_id %>
+  </p>
+  <p>
+    <%= f.label :fecha %><br />
+    <%= f.date_select :fecha %>
+  </p>
+  <p>
+    <%= f.label :evento %><br />
+    <%= f.text_field :evento %>
+  </p>
+  <p>
+    <%= f.label :dias %><br />
+    <%= f.text_field :dias %>
+  </p>
+  <p>
+    <%= f.label :horas %><br />
+    <%= f.text_field :horas %>
+  </p>
+  <p>
+    <%= f.label :minutos %><br />
+    <%= f.text_field :minutos %>
+  </p>
+  <p>
+    <%= f.label :motivo %><br />
+    <%= f.text_field :motivo %>
+  </p>
+  <p>
+    <%= f.label :observaciones %><br />
+    <%= f.text_area :observaciones %>
+  </p>
+  <p>
+    <%= f.submit "Crear" %>
+  </p>
+<% end %>
+
+<%= link_to 'Volver', ausencias_path %>
